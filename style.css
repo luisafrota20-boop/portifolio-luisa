@@ -1,51 +1,94 @@
-body{
-font-family: Arial, sans-serif;
-background:#f4f7fb;
-margin:0;
-padding:0;
+/* ==========================================================================
+   PALETA DE CORES E DIRETRIZES DE ACESSIBILIDADE DE CONTRASTE
+   ========================================================================== */
+:root {
+    --bg-main: #fdfdfd;
+    --text-primary: #212529;
+    --text-muted: #5c636a;
+    --card-bg-mock: #e9ecef;
 }
 
-.hero{
-background:linear-gradient(135deg,#0d6efd,#003c8f);
-color:white;
-padding:80px 20px;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+    overflow-x: hidden;
 }
 
-.foto-perfil{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid white;
-margin-bottom:20px;
+/* Espaçamento e tipografia controlada */
+.line-height-base {
+    line-height: 1.65;
 }
 
-h2{
-color:#0d6efd;
-margin-bottom:20px;
+.max-w-md {
+    max-width: 600px;
 }
 
-.card{
-border:none;
-border-radius:15px;
+/* Estilização da Navbar */
+.nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: all 0.2s ease-in-out;
 }
 
-.skill-card{
-padding:20px;
-text-align:center;
-font-weight:bold;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+.nav-link:hover, .nav-link:focus {
+    color: #000 !important;
+    text-decoration: underline;
 }
 
-footer{
-background:#212529;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+/* Estado Ativo dos Botões do Filtro JavaScript */
+.filter-btn.active {
+    background-color: var(--text-primary) !important;
+    color: #ffffff !important;
 }
 
-#mensagem{
-font-weight:bold;
-font-size:18px;
+/* Cards Estilizados Sem Necessidade de Imagem Física */
+.custom-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+}
+
+.card-placeholder {
+    height: 200px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* INDICADOR VISUAL NITIDO DE FOCO TECLADO (Acessibilidade Obrigatória 6.8) */
+*:focus-visible {
+    outline: 3px solid #0d6efd !important;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - RESPONSIVIDADE CUSTOMIZADA (Requisito 6.6)
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: 1rem;
+        text-align: center;
+    }
+    .nav-item {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+    h1 {
+        font-size: 2.2rem !important;
+    }
+    .card-placeholder {
+        height: 160px;
+    }
 }
