@@ -1,62 +1,81 @@
-/**
- * PROJETO FRONT-END - ELENA MOURA FOTOGRAFIA
- * Scripts de Interatividade Básica (Filtros e Validação de Formulário)
- */
 document.addEventListener("DOMContentLoaded", function () {
     
-    // --- FUNCIONALIDADE 1: FILTRO DINÂMICO DO PORTFÓLIO ---
-    const filterButtons = document.querySelectorAll(".filter-btn");
+    // FILTRO DINÂMICO COM ANIMAÇÃO DE ESCALA
+    const filterButtons = document.querySelectorAll(".btn-custom-filter");
     const portfolioItems = document.querySelectorAll(".portfolio-item");
 
     filterButtons.forEach(button => {
         button.addEventListener("click", function () {
-            // Gerencia classes de estado ativo visual
             filterButtons.forEach(btn => btn.classList.remove("active"));
             this.classList.add("active");
 
-            const filterValue = this.getAttribute("data-filter");
+            const currentFilter = this.getAttribute("data-filter");
 
-            // Manipulação dinâmica de visibilidade no DOM
             portfolioItems.forEach(item => {
-                const itemCategory = item.getAttribute("data-category");
-                if (filterValue === "todos" || itemCategory === filterValue) {
+                const category = item.getAttribute("data-category");
+                
+                if (currentFilter === "todos" || category === currentFilter) {
                     item.style.display = "block";
+                    setTimeout(() => {
+                        item.style.opacity = "1";
+                        item.style.transform = "scale(1)";
+                    }, 10);
                 } else {
+                    item.style.opacity = "0";
+                    item.style.transform = "scale(0.95)";
                     item.style.display = "none";
                 }
             });
         });
     });
 
-    // --- FUNCIONALIDADE 2: VALIDAÇÃO DO FORMULÁRIO DE CONTATO ---
-    const form = document.getElementById("contact-form");
-    const feedbackContainer = document.getElementById("form-feedback");
+    // VALIDAÇÃO AVANÇADA COM FOCO SEMÂNTICO
+    const contactForm = document.getElementById("contact-form");
+    const formFeedback = document.getElementById("form-feedback");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio real / recarregamento da página (Restrição 5)
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nomeInput = document.getElementById("nome");
+        const emailInput = document.getElementById("email");
+        const mensagemInput = document.getElementById("mensagem");
+
+        const nome = nomeInput.value.trim();
+        const email = emailInput.value.trim();
+        const mensagem = mensagemInput.value.trim();
+
+        formFeedback.className = "alert d-none custom-alert";
+        [nomeInput, emailInput, mensagemInput].forEach(input => input.classList.remove("is-invalid"));
+
+        let hasErrors = false;
+
+        if (nome === "") {
+            nomeInput.classList.add("is-invalid");
+            hasErrors = true;
+        }
         
-        // Coleta e higienização de strings contra campos vazios
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
+        const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+        if (email === "" || !emailPattern.test(email)) {
+            emailInput.classList.add("is-invalid");
+            hasErrors = true;
+        }
 
-        // Limpa estados anteriores de feedback
-        feedbackContainer.className = "alert d-none";
+        if (mensagem === "") {
+            mensagemInput.classList.add("is-invalid");
+            hasErrors = true;
+        }
 
-        // Lógica de validação client-side obrigatória
-        if (nome === "" || email === "" || mensagem === "") {
-            feedbackContainer.classList.remove("d-none");
-            feedbackContainer.classList.add("alert-danger");
-            feedbackContainer.textContent = "Por favor, preencha todos os campos obrigatórios (*).";
+        if (hasErrors) {
+            formFeedback.classList.remove("d-none");
+            formFeedback.classList.add("alert-danger");
+            formFeedback.textContent = "Preencha os campos destacados corretamente para enviar.";
             return;
         }
 
-        // Simulação de sucesso com confirmação visual dinâmica (Requisito 6.9)
-        feedbackContainer.classList.remove("d-none");
-        feedbackContainer.classList.add("alert-success");
-        feedbackContainer.textContent = `Obrigado pelo contato, ${nome}! Sua solicitação de orçamento foi simulada e registrada com sucesso.`;
+        formFeedback.classList.remove("d-none");
+        formFeedback.classList.add("alert-success");
+        formFeedback.innerHTML = `<strong>Sucesso!</strong> Proposta simulada para o e-mail <em>${email}</em>. Elena Moura entrará em contato em breve.`;
         
-        // Reseta o formulário pós-envio
-        form.reset();
+        contactForm.reset();
     });
 });
