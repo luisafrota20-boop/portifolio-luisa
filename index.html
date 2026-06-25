@@ -3,105 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elena Moura | Fotografia Profissional</title>
+    <title>Elena Moura | Fotografia de Alto Impacto</title>
     <!-- Bootstrap 5 CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS Customizado Externo -->
+    <!-- Google Fonts para Design Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Customizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Acessibilidade: Link para pular direto ao conteúdo com o teclado -->
-    <a href="#conteudo-principal" class="visually-hidden-focusable">Pular para o conteúdo principal</a>
+    <!-- Link de Acessibilidade Oculto/Focalizável -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- HEADER E NAVBAR (Uso de Bootstrap Justificado) -->
-    <header class="bg-white shadow-sm sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light container" aria-label="Navegação principal do site">
-            <a class="navbar-brand fw-bold text-dark" href="#">ELENA MOURA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu de navegação">
+    <!-- NAVBAR PREMIUM COM EFEITO BLUR -->
+    <header class="custom-navbar sticky-top">
+        <nav class="navbar navbar-expand-lg container" aria-label="Navegação principal">
+            <a class="navbar-brand text-dark" href="#">
+                <span class="brand-title">ELENA MOURA</span>
+                <span class="brand-subtitle">STUDIO</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">A Essência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio Exclusivo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Conectar</a></li>
+                    <li class="nav-item ms-lg-3"><a href="#contato" class="btn btn-dark btn-sm nav-btn-cta">Solicitar Proposta</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL (Tags Semânticas Requeridas) -->
     <main id="conteudo-principal">
 
-        <!-- HERO SECTION (Chamada para Ação Principal) -->
-        <section class="hero-section d-flex align-items-center bg-light py-5">
-            <div class="container text-center py-5">
-                <h1 class="display-4 fw-bold text-dark mb-3">Fotografia que eleva sua presença digital</h1>
-                <p class="lead text-muted mb-4 max-w-md mx-auto">Retratos corporativos sutis e coberturas de eventos com um olhar elegante, autoral e moderno.</p>
-                <a href="#contato" class="btn btn-dark btn-lg px-5">Solicitar Orçamento Personalizado</a>
+        <!-- HERO SECTION COM DESIGN MINIMALISTA E TIPOGRAFIA DE IMPACTO -->
+        <section class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center min-vh-75 py-5">
+                    <div class="col-lg-7 text-start">
+                        <div class="badge bg-secondary-subtle text-dark mb-3 px-3 py-2 text-uppercase tracking-wider">Fotografia Corporativa & Branding</div>
+                        <h1 class="display-3 fw-bold text-dark mb-4 leading-tight">Registros sutis que constroem autoridade.</h1>
+                        <p class="lead text-muted mb-5 pe-lg-5">A imagem é seu primeiro ponto de contato com o mercado. Desenvolvemos ensaios corporativos elegantes e coberturas de eventos institucionais focados em alta liderança.</p>
+                        <div class="d-flex flex-sm-row flex-column gap-3">
+                            <a href="#portfolio" class="btn btn-dark btn-lg px-4 fs-6">Explorar Portfólio</a>
+                            <a href="#contato" class="btn btn-outline-dark btn-lg px-4 fs-6">Iniciar um Projeto</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mt-5 mt-lg-0">
+                        <!-- Preview do Estúdio usando SVG Puro para dispensar imagens físicas -->
+                        <div class="hero-visual-frame position-relative">
+                            <div class="visual-accent-box"></div>
+                            <svg class="w-100 h-100 visual-svg" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstração gráfica representando foco e lentes profissionais">
+                                <rect width="400" height="500" rx="16" fill="#f1f3f5"/>
+                                <circle cx="200" cy="250" r="100" stroke="#212529" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                <circle cx="200" cy="250" r="60" fill="#212529" fill-opacity="0.05" stroke="#212529" stroke-width="2"/>
+                                <line x1="200" y1="50" x2="200" y2="450" stroke="#dee2e6" stroke-width="1"/>
+                                <line x1="50" y1="250" x2="350" y2="250" stroke="#dee2e6" stroke-width="1"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- SOBRE SECTION -->
-        <section id="sobre" class="py-5 container">
-            <div class="row py-4">
-                <div class="col-md-8 mx-auto text-center">
-                    <h2 class="fw-bold text-dark mb-4">A Essência do Trabalho</h2>
-                    <p class="text-secondary fs-5 line-height-base">
-                        Com sólida experiência de mercado, Elena Moura busca traduzir a identidade e o profissionalismo de seus clientes através de registros elaborados e de alto impacto visual. O foco está no posicionamento de marcas individuais e na documentação de momentos institucionais decisivos.
+        <!-- SOBRE / MANIFESTO COM DESIGN ASSIMÉTRICO -->
+        <section id="sobre" class="py-5 container section-padding">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <span class="text-uppercase tracking-widest text-muted d-block mb-2">O Manifesto</span>
+                    <h2 class="fw-bold text-dark display-5">A ótica por trás de cada posicionamento.</h2>
+                </div>
+                <div class="col-lg-7 ps-lg-5">
+                    <p class="text-secondary fs-5 line-height-relaxed mb-4">
+                        Elena Moura não realiza apenas registros. Ela decodifica a essência da liderança e a energia de eventos institucionais de alto nível através de uma estética fina, atual e desprovida de excessos. 
+                    </p>
+                    <p class="text-muted">
+                        Cada sessão é precedida por uma consultoria estratégica de branding visual para garantir que a postura, a iluminação e os cenários conversem diretamente com as ambições corporativas do fotografado.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- PORTFÓLIO SECTION (Interatividade JavaScript e Layout Responsivo) -->
-        <section id="portfolio" class="py-5 bg-light">
+        <!-- PORTFÓLIO PREMIUM COM FILTROS INTERATIVOS -->
+        <section id="portfolio" class="py-5 bg-light section-padding">
             <div class="container">
-                <h2 class="text-center fw-bold text-dark mb-4">Portfólio Selecionado</h2>
-                
-                <!-- Botões de Filtro Acessíveis via Teclado -->
-                <div class="d-flex justify-content-center mb-5 flex-wrap" role="group" aria-label="Filtros de exibição do portfólio">
-                    <button class="btn btn-outline-dark m-1 active filter-btn" data-filter="todos">Todos os Projetos</button>
-                    <button class="btn btn-outline-dark m-1 filter-btn" data-filter="corporativo">Corporativo</button>
-                    <button class="btn btn-outline-dark m-1 filter-btn" data-filter="eventos">Eventos</button>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end mb-5 gap-4">
+                    <div>
+                        <span class="text-uppercase tracking-widest text-muted d-block mb-2">Trabalhos Recentes</span>
+                        <h2 class="fw-bold text-dark h1">Curadoria de Projetos</h2>
+                    </div>
+                    <div class="d-flex filter-group gap-2" role="group" aria-label="Filtros do portfólio">
+                        <button class="btn btn-custom-filter active" data-filter="todos">Todos</button>
+                        <button class="btn btn-custom-filter" data-filter="corporativo">Corporativo</button>
+                        <button class="btn btn-custom-filter" data-filter="eventos">Eventos</button>
+                    </div>
                 </div>
 
-                <!-- Cards do Portfólio (Design Abstrato sem dependência de imagens) -->
+                <!-- Grid Dinâmico -->
                 <div class="row g-4" id="portfolio-grid">
-                    <!-- Projeto 1 -->
+                    <!-- Item 1 -->
                     <div class="col-md-6 col-lg-4 portfolio-item" data-category="corporativo">
-                        <div class="card h-100 border-0 shadow-sm custom-card">
-                            <div class="card-placeholder d-flex align-items-center justify-content-center text-muted bg-secondary-subtle">
-                                <span>[Retrato Corporativo de Estúdio]</span>
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="project-preview bg-dark-subtle d-flex flex-column justify-content-between p-4">
+                                <div class="badge bg-white text-dark align-self-start px-3 py-2 text-uppercase tracking-wider">Estúdio / SP</div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-muted opacity-50"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
                             </div>
-                            <div class="card-body">
-                                <h3 class="card-title h5 text-dark fw-bold">Posicionamento Executivo</h3>
-                                <p class="card-text text-muted">Ensaios minimalistas sob medida para lideranças e diretores do setor financeiro e jurídico.</p>
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 text-dark fw-bold mb-2">Retratos Executivos: C-Level</h3>
+                                <p class="card-text text-muted small">Posicionamento de imagem limpo, austero e elegante para lideranças e conselheiros do mercado financeiro.</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Projeto 2 -->
+                    <!-- Item 2 -->
                     <div class="col-md-6 col-lg-4 portfolio-item" data-category="eventos">
-                        <div class="card h-100 border-0 shadow-sm custom-card">
-                            <div class="card-placeholder d-flex align-items-center justify-content-center text-muted bg-secondary-subtle">
-                                <span>[Cobertura de Conferência]</span>
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="project-preview bg-secondary-subtle d-flex flex-column justify-content-between p-4">
+                                <div class="badge bg-white text-dark align-self-start px-3 py-2 text-uppercase tracking-wider">Conferência</div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-muted opacity-50"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             </div>
-                            <div class="card-body">
-                                <h3 class="card-title h5 text-dark fw-bold">Tech Conference 2026</h3>
-                                <p class="card-text text-muted">Registro dinâmico e cobertura completa de painéis e palestrantes em eventos de inovação.</p>
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 text-dark fw-bold mb-2">Global Tech Summit 2026</h3>
+                                <p class="card-text text-muted small">Cobertura dinâmica em tempo real focado na captação espontânea de palestrantes internacionais e interações de networking.</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Projeto 3 -->
+                    <!-- Item 3 -->
                     <div class="col-md-6 col-lg-4 portfolio-item" data-category="corporativo">
-                        <div class="card h-100 border-0 shadow-sm custom-card">
-                            <div class="card-placeholder d-flex align-items-center justify-content-center text-muted bg-secondary-subtle">
-                                <span>[Sessão Editorial Profissional]</span>
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="project-preview bg-dark text-white d-flex flex-column justify-content-between p-4" style="background: linear-gradient(135deg, #111, #222);">
+                                <div class="badge bg-secondary text-white align-self-start px-3 py-2 text-uppercase tracking-wider">Editorial</div>
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white opacity-25"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                             </div>
-                            <div class="card-body">
-                                <h3 class="card-title h5 text-dark fw-bold">Brand Autoral</h3>
-                                <p class="card-text text-muted">Fotografia de branding estratégico focada no desenvolvimento de autoridade digital.</p>
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 text-dark fw-bold mb-2">Branding Visual Autoral</h3>
+                                <p class="card-text text-muted small">Criação de portfólios estéticos detalhados para consultores e escritórios de advocacia boutique.</p>
                             </div>
                         </div>
                     </div>
@@ -109,29 +149,32 @@
             </div>
         </section>
 
-        <!-- CONTATO SECTION (Validação Lógica de Formulário) -->
-        <section id="contato" class="py-5 container">
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <h2 class="text-center fw-bold text-dark mb-4">Solicite um Orçamento</h2>
-                    
-                    <!-- Elemento de Feedback Dinâmico JavaScript -->
-                    <div id="form-feedback" class="alert d-none" role="alert"></div>
+        <!-- SEÇÃO DE CONTATO -->
+        <section id="contato" class="py-5 container section-padding">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-5">
+                        <span class="text-uppercase tracking-widest text-muted d-block mb-2">Agendamento & Briefing</span>
+                        <h2 class="fw-bold text-dark h1">Inicie sua transformação visual</h2>
+                        <p class="text-muted mt-2">Preencha os campos abaixo para receber nossa tabela de honorários e disponibilidade.</p>
+                    </div>
 
-                    <form id="contact-form" novalidate>
-                        <div class="mb-3">
-                            <label for="nome" class="form-label fw-semibold">Nome Completo *</label>
-                            <input type="text" id="nome" class="form-control py-2" required aria-required="true">
+                    <div id="form-feedback" class="alert d-none custom-alert" role="alert"></div>
+
+                    <form id="contact-form" novalidate class="custom-form-wrapper p-4 p-md-5 border rounded-4 bg-white shadow-sm">
+                        <div class="mb-4">
+                            <label for="nome" class="form-label text-dark fw-medium small">Nome Completo *</label>
+                            <input type="text" id="nome" class="form-control custom-input" placeholder="Ex: Luisa Castro" required aria-required="true">
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-semibold">E-mail de Contato *</label>
-                            <input type="email" id="email" class="form-control py-2" required aria-required="true">
+                        <div class="mb-4">
+                            <label for="email" class="form-label text-dark fw-medium small">E-mail Corporativo *</label>
+                            <input type="email" id="email" class="form-control custom-input" placeholder="Ex: luisa@empresa.com" required aria-required="true">
                         </div>
-                        <div class="mb-3">
-                            <label for="mensagem" class="form-label fw-semibold">Detalhes do Projeto *</label>
-                            <textarea id="mensagem" class="form-control" rows="4" required aria-required="true" placeholder="Descreva brevemente a sua necessidade fotográfica..."></textarea>
+                        <div class="mb-4">
+                            <label for="mensagem" class="form-label text-dark fw-medium small">Descreva o seu projeto ou evento *</label>
+                            <textarea id="mensagem" class="form-control custom-input" rows="4" placeholder="Conte-nos brevemente o escopo e objetivos da sessão..." required aria-required="true"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dark w-100 py-2.5 fw-bold">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-dark w-100 py-3 fw-semibold text-uppercase tracking-wider">Enviar Solicitação</button>
                     </form>
                 </div>
             </div>
@@ -139,15 +182,22 @@
 
     </main>
 
-    <!-- RODAPÉ SEMÂNTICO (Requisito Obrigatório) -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-1">&copy; 2026 Elena Moura Fotografia. Todos os direitos reservados.</p>
-            <p class="small text-muted mb-0">Disciplina: Desenvolvimento Front-end | Turma: GPE02TP001T</p>
+    <footer class="bg-white border-top py-5 text-dark mt-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between text-center text-md-start">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-1 fw-bold text-dark">ELENA MOURA &copy; 2026</p>
+                    <p class="small text-muted mb-0">Fotografia Fina, Atual e Sutil para Negócios de Alto Valor.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="small text-muted d-block">Trabalho Acadêmico de Desenvolvimento Front-end</span>
+                    <span class="small text-dark fw-medium">Aluna: Luisa Castro Fagundes Frota | Turma: GPE02TP001T</span>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JavaScript Bundle via CDN -->
+    <!-- Bootstrap 5 JS Bundle via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript Customizado -->
     <script src="js/script.js"></script>
