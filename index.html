@@ -1,175 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Portfólio Profissional | Luisa Castro</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Moura | Fotografia Profissional</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Customizado Externo -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-<div class="container">
-<a class="navbar-brand" href="#">Luisa Castro</a>
-</div>
-</nav>
+    <!-- Acessibilidade: Link para pular direto ao conteúdo com o teclado -->
+    <a href="#conteudo-principal" class="visually-hidden-focusable">Pular para o conteúdo principal</a>
 
-<header class="hero">
-<div class="container text-center">
+    <!-- HEADER E NAVBAR (Uso de Bootstrap Justificado) -->
+    <header class="bg-white shadow-sm sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light container" aria-label="Navegação principal do site">
+            <a class="navbar-brand fw-bold text-dark" href="#">ELENA MOURA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<h1>Luisa Castro Fagundes Frota</h1>
+    <!-- CONTEÚDO PRINCIPAL (Tags Semânticas Requeridas) -->
+    <main id="conteudo-principal">
 
-<p class="lead">
-Estudante de Análise e Desenvolvimento de Sistemas
-</p>
+        <!-- HERO SECTION (Chamada para Ação Principal) -->
+        <section class="hero-section d-flex align-items-center bg-light py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-4 fw-bold text-dark mb-3">Fotografia que eleva sua presença digital</h1>
+                <p class="lead text-muted mb-4 max-w-md mx-auto">Retratos corporativos sutis e coberturas de eventos com um olhar elegante, autoral e moderno.</p>
+                <a href="#contato" class="btn btn-dark btn-lg px-5">Solicitar Orçamento Personalizado</a>
+            </div>
+        </section>
 
-<button id="btnInfo" class="btn btn-light">
-Conheça meus objetivos
-</button>
+        <!-- SOBRE SECTION -->
+        <section id="sobre" class="py-5 container">
+            <div class="row py-4">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="fw-bold text-dark mb-4">A Essência do Trabalho</h2>
+                    <p class="text-secondary fs-5 line-height-base">
+                        Com sólida experiência de mercado, Elena Moura busca traduzir a identidade e o profissionalismo de seus clientes através de registros elaborados e de alto impacto visual. O foco está no posicionamento de marcas individuais e na documentação de momentos institucionais decisivos.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<p id="mensagem" class="mt-3"></p>
+        <!-- PORTFÓLIO SECTION (Interatividade JavaScript e Layout Responsivo) -->
+        <section id="portfolio" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center fw-bold text-dark mb-4">Portfólio Selecionado</h2>
+                
+                <!-- Botões de Filtro Acessíveis via Teclado -->
+                <div class="d-flex justify-content-center mb-5 flex-wrap" role="group" aria-label="Filtros de exibição do portfólio">
+                    <button class="btn btn-outline-dark m-1 active filter-btn" data-filter="todos">Todos os Projetos</button>
+                    <button class="btn btn-outline-dark m-1 filter-btn" data-filter="corporativo">Corporativo</button>
+                    <button class="btn btn-outline-dark m-1 filter-btn" data-filter="eventos">Eventos</button>
+                </div>
 
-</div>
-</header>
+                <!-- Cards do Portfólio (Design Abstrato sem dependência de imagens) -->
+                <div class="row g-4" id="portfolio-grid">
+                    <!-- Projeto 1 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="corporativo">
+                        <div class="card h-100 border-0 shadow-sm custom-card">
+                            <div class="card-placeholder d-flex align-items-center justify-content-center text-muted bg-secondary-subtle">
+                                <span>[Retrato Corporativo de Estúdio]</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5 text-dark fw-bold">Posicionamento Executivo</h3>
+                                <p class="card-text text-muted">Ensaios minimalistas sob medida para lideranças e diretores do setor financeiro e jurídico.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="eventos">
+                        <div class="card h-100 border-0 shadow-sm custom-card">
+                            <div class="card-placeholder d-flex align-items-center justify-content-center text-muted bg-secondary-subtle">
+                                <span>[Cobertura de Conferência]</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5 text-dark fw-bold">Tech Conference 2026</h3>
+                                <p class="card-text text-muted">Registro dinâmico e cobertura completa de painéis e palestrantes em eventos de inovação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projeto 3 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="corporativo">
+                        <div class="card h-100 border-0 shadow-sm custom-card">
+                            <div class="card-placeholder d-flex align-items-center justify-content-center text-muted bg-secondary-subtle">
+                                <span>[Sessão Editorial Profissional]</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5 text-dark fw-bold">Brand Autoral</h3>
+                                <p class="card-text text-muted">Fotografia de branding estratégico focada no desenvolvimento de autoridade digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="container mt-5">
+        <!-- CONTATO SECTION (Validação Lógica de Formulário) -->
+        <section id="contato" class="py-5 container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h2 class="text-center fw-bold text-dark mb-4">Solicite um Orçamento</h2>
+                    
+                    <!-- Elemento de Feedback Dinâmico JavaScript -->
+                    <div id="form-feedback" class="alert d-none" role="alert"></div>
 
-<h2>Sobre Mim</h2>
+                    <form id="contact-form" novalidate>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-semibold">Nome Completo *</label>
+                            <input type="text" id="nome" class="form-control py-2" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">E-mail de Contato *</label>
+                            <input type="email" id="email" class="form-control py-2" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label fw-semibold">Detalhes do Projeto *</label>
+                            <textarea id="mensagem" class="form-control" rows="4" required aria-required="true" placeholder="Descreva brevemente a sua necessidade fotográfica..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 py-2.5 fw-bold">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-<p>
-Sou estudante de Análise e Desenvolvimento de Sistemas,
-apaixonada por tecnologia e com grande interesse na área
-de Análise de Dados.
+    </main>
 
-Busco desenvolver constantemente minhas habilidades,
-adquirir experiência profissional e contribuir com soluções
-que auxiliem organizações na tomada de decisões através da análise de informações.
-</p>
+    <!-- RODAPÉ SEMÂNTICO (Requisito Obrigatório) -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Elena Moura Fotografia. Todos os direitos reservados.</p>
+            <p class="small text-muted mb-0">Disciplina: Desenvolvimento Front-end | Turma: GPE02TP001T</p>
+        </div>
+    </footer>
 
-</section>
-
-<section class="container mt-5">
-
-<h2>Formação Acadêmica</h2>
-
-<div class="card p-4 shadow">
-
-<h4>Análise e Desenvolvimento de Sistemas</h4>
-
-<p>
-Curso superior voltado para desenvolvimento de software,
-banco de dados, lógica de programação, desenvolvimento web e tecnologias aplicadas ao mercado.
-</p>
-
-</div>
-
-</section>
-
-<section class="container mt-5">
-
-<h2>Competências Técnicas</h2>
-
-<div class="row">
-
-<div class="col-md-4">
-<div class="card skill-card">
-HTML5
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card skill-card">
-CSS3
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card skill-card">
-JavaScript
-</div>
-</div>
-
-<div class="col-md-4 mt-3">
-<div class="card skill-card">
-Lógica de Programação
-</div>
-</div>
-
-<div class="col-md-4 mt-3">
-<div class="card skill-card">
-Banco de Dados
-</div>
-</div>
-
-<div class="col-md-4 mt-3">
-<div class="card skill-card">
-Pacote Office
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="container mt-5">
-
-<h2>Objetivos Profissionais</h2>
-
-<div class="card p-4 shadow">
-
-<p>
-Meu principal objetivo é construir uma carreira sólida na área de tecnologia,
-especialmente em Análise de Dados, utilizando ferramentas tecnológicas para transformar dados em informações relevantes para empresas e organizações.
-</p>
-
-</div>
-
-</section>
-
-<section class="container mt-5">
-
-<h2>Projetos Acadêmicos</h2>
-
-<div class="card p-4 shadow">
-
-<h4>Portfólio Profissional Web</h4>
-
-<p>
-Desenvolvimento de um site responsivo utilizando HTML, CSS, JavaScript e Bootstrap para apresentação profissional.
-</p>
-
-</div>
-
-</section>
-
-<section class="container mt-5 mb-5">
-
-<h2>Contato</h2>
-
-<div class="card p-4 shadow">
-
-<p>📧 Email: contato@exemplo.com</p>
-
-<p>💼 LinkedIn: linkedin.com/in/luisacastro</p>
-
-<p>📍 Brasília - DF</p>
-
-</div>
-
-</section>
-
-<footer>
-<p>
-© 2026 - Portfólio Profissional | Luisa Castro
-</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <!-- Bootstrap 5 JavaScript Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Customizado -->
+    <script src="js/script.js"></script>
 </body>
 </html>
